@@ -6,6 +6,7 @@ double add(double firstNumber, double secondNumber);
 double subtract(double firstNumber, double secondNumber);
 double multiply(double firstNumber, double secondNumber);
 double divide(double firstNumber, double secondNumber);
+void clean_stdin(void);
 
 int main(void)
 {
@@ -17,8 +18,8 @@ int main(void)
 
 	printf("Enter two ints and/or doubles separated by a math operator\n");
 	printf("e.g., 1.2 + 3.4, 5.6 - 7.8, 9.10 * 2.3, 4.5 / 6.7\n");
-	_flushall();
 	scanf("%lf %c %lf", &num1, &mathOperator, &num2);
+    clean_stdin();
 	
 	if (mathOperator == '+')
 	{
@@ -82,4 +83,12 @@ double divide(double firstNumber, double secondNumber)
 	{
 		return ERROR_CODE;
 	}
+}
+
+void clean_stdin(void)
+{
+    int c;
+    do {
+        c = getchar();
+    } while (c != '\n' && c != EOF);
 }

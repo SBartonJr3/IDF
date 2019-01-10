@@ -32,6 +32,7 @@ struct Battleship
 
 int print_both_grids(void);
 int place_a_ship(int shipNumber, char * gridStartingPointer, int compassDirection);
+void clean_stdin(void);
 
 
 char myBattleshipGrid[GRID_ROWS][GRID_COLUMNS] = { 0 };
@@ -111,14 +112,12 @@ int main(void)
 	for (i = 0; i < 5; i++)
 	{
 		printf("Placing %s \nWhat grid position?  (e.g. B4)\n", (arrayOfShips + i)->name);
-		_flushall();
 		scanf("%c%d", &userInputRow, &userInputCol);
-		getchar();
+		clean_stdin();
 		userInputRow = toupper(userInputRow);
 		printf("What compass direction? (e.g., N, S, E, W)\n");
-		_flushall();
-		getchar();
 		scanf("%c", &userInputCompassDirection);
+		clean_stdin();
 		userInputCompassDirection = toupper(userInputCompassDirection);
 		
 
@@ -187,4 +186,12 @@ int place_a_ship(int shipNumber, char * gridStartingPointer, int compassDirectio
 
 
 	return returnValuePAS;
+}
+
+void clean_stdin(void)
+{
+    int c;
+    do {
+        c = getchar();
+    } while (c != '\n' && c != EOF);
 }
