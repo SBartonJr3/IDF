@@ -32,6 +32,7 @@
 #define MANUAL_TEST
 //#define AUTO_TEST
 
+void clean_stdin(void);
 unsigned long shadow_sequence_number(int placeNumber);
 
 int main(void)
@@ -46,7 +47,7 @@ int main(void)
 	tempValue = 0;
 
 	printf("How many numbers would you like to calculate?\n");
-	_flushall();
+	clean_stdin();
 	scanf("%d", &howManyToCalculate);
 	putchar(10);
 
@@ -119,6 +120,15 @@ int main(void)
  *                 S(1)		S(2)	S(3)	S(4)	S(5)	S(6)	S(7)	S(8)	S(9)	S(10)
  *                 9		0		9		25		50		86		135		199		280		380
  */
+
+void clean_stdin(void)
+{
+    int c;
+    do {
+        c = getchar();
+    } while (c != '\n' && c != EOF);
+}
+
 unsigned long shadow_sequence_number(int placeNumber)
 {
 	/* INSERT CODE HERE */

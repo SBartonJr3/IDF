@@ -9,6 +9,7 @@
 
 int fibonacci_number(int sequenceNumber);
 void error_reporting(int currentErrno);
+void clean_stdin(void);
 
 int main(void)
 {
@@ -18,8 +19,8 @@ int main(void)
 	int currentErr = 0;
 
 	printf("How many Fibonacci numbers would you like to print? \n");
-	_flushall();
 	scanf("%d", &numberFibonacciNumbers);
+    clean_stdin();
 	currentErr = errno; 
 	if (currentErr != 0)
 	{
@@ -75,4 +76,12 @@ void error_reporting(int currErrno)
 	}
 
 	return;
+}
+
+void clean_stdin(void)
+{
+    int c;
+    do {
+        c = getchar();
+    } while (c != '\n' && c != EOF);
 }

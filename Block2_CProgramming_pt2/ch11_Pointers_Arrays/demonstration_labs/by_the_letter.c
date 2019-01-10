@@ -3,6 +3,7 @@
 #define BUFF_SIZE ((int)1024)
 
 int count_this_letter(char * string_ptr, char countThis, int * howMany_ptr);
+void clean_stdin(void);
 
 int main(void)
 {
@@ -14,11 +15,11 @@ int main(void)
 
 	/* TAKE USER INPUT */
 	puts("Enter a string:");
-	_flushall();
 	fgets(userString, BUFF_SIZE, stdin);
+    clean_stdin();
 	puts("Enter a character to search for:");
-	_flushall();
 	countThis = getc(stdin);
+    clean_stdin();
 
 	/* VERIFICATION */
 	printf("\n\n\n\nSearching the folowing string...\n%s", userString);
@@ -88,4 +89,13 @@ int count_this_letter(char * string_ptr, char countThis, int * howMany_ptr)
 
 
 	return returnValue;
+}
+
+
+void clean_stdin(void)
+{
+    int c;
+    do {
+        c = getchar();
+    } while (c != '\n' && c != EOF);
 }
