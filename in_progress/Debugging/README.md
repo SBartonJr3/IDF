@@ -3,7 +3,7 @@
 ## Lessons:
 
 * Intro to Debugging
-* Using I/O to Debug
+* Using printf() to Debug
 * Reading and Understanding Errors
 * Reading and Understading Compile Errors/Warnings
 * Using an IDE to debug
