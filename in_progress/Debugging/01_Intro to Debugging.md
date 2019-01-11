@@ -13,6 +13,7 @@ Or maybe you asked yourself,
 
 * **Why isn't my code passing this test case?**
 * **My code compiled, what do these warnings mean though?**
+    * **Why is my program doing something I didn't expect?**
 
 These are all great questions a developer should be asking themself. Debugging is a tool that doesn't necessary give us the answer... but helps us find it. **De** means to denote removal. **Bug** is just an error, flaw, failure or fault within a program. This can be in the compilation process or some incorrect code. 
 
@@ -120,4 +121,12 @@ We gather this information by using tools such as debuggers, I/O, test assertion
 
 `Confirm the things you believe to be true... until you find something that's not true`
 
-During this step, we are going to analyze all of the information we have gathered above. We are going to confirm conditions, variables, stack allignment, etc. Whatever we find something in code that is producing an output that we did not expect... we need to attempt to figure out why that is happening. This often requires us to backstep starting at the first thing we find to be false... until we run into a series of things we find to be true. Generally this location in code will often contain the bug. Though sometimes... it can be more complicated than that. 
+During this step, we are going to analyze all of the information we have gathered above. We are going to confirm conditions, variables, stack allignment, etc. Whenever we find something in code that is producing an output that we did not expect... we need to attempt to figure out why that is happening. This often requires us to backstep starting at the first thing we find to be false... until we run into a series of things we find to be true. Generally this location in code will often contain the bug. Though sometimes... it can be more complicated than that.
+
+We will of course go over many different methods of analyzing and identifying bugs during this chapter. 
+
+---
+
+### Step 5: Fix the Bug
+
+This part is pretty straight forward. Once we have identified what caused the bug... we need to fix said code. But there's a little more to it than that. We also need to ensure no further bugs were created by squashing that bug. This can be done by simply running the code again or creating an identical snapshot and re-analyzing the same "ladder" we just analyzed. We will discuss this step a tad more later in the chapter. 
