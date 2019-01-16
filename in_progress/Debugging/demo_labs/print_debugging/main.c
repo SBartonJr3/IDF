@@ -24,32 +24,32 @@ int main() {
         printf("Please choose:\n1: add\n2: subtract\n3: divide\n4: multiply\n");
 
         scanf("%d", &choice);
-        clean_stdin();
+        // INSTRUCTOR-ADD: clean_stdin();
 
         // Route user selection
         switch(choice) {
             case 1:
                 printf("Please enter two numbers, separated by a space, that you'd like to add\n");
                 scanf("%d %d", &a, &b);
-                clean_stdin();
+                // INSTRUCTOR-ADD: clean_stdin();
                 value = add(a, b);
                 break;
             case 2:
                 printf("Please enter two numbers, separated by a space, that you'd like to subtract\n");
                 scanf("%d %d", &a, &b);
-                clean_stdin();
+                // INSTRUCTOR-ADD: clean_stdin();
                 value = sub(a, b);
                 break;
             case 3:
                 printf("Please enter two numbers, separated by a space, that you'd like to divide\n");
                 scanf("%d %d", &a, &b);
-                clean_stdin();
+                // INSTRUCTOR-ADD: clean_stdin();
                 value = div(a, b);
                 break;
             case 4:
                 printf("Please enter two numbers, separated by a space, that you'd like to multiply\n");
                 scanf("%d %d", &a, &b);
-                clean_stdin();
+                // INSTRUCTOR-ADD: clean_stdin();
                 value = mul(a, b);
                 break;
             default:
@@ -61,9 +61,8 @@ int main() {
 
         // Check if user wants to run the calc again
         printf("Run again (y/n)?\n");
-        scanf("%c", &rerun);
-        clean_stdin();
-        printf("re-run = %d\n", rerun);
+        scanf("%d", &rerun); // INSTRUCTOR-REMOVE
+        // INSTRUCTOR-ADD: scanf("%d", &rerun);
         if (rerun == 'y' || rerun == 'Y') {
             rerun = 0;
         }
@@ -74,22 +73,27 @@ int main() {
 }
 
 
-// Calc Functions
+// !!Calc Functions!!
+
+// Addition
 int add(int a, int b)
 {
     return a + b;
 }
 
+// Subtraction
 int sub(int a, int b)
 {
     return a - b;
 }
 
+// Division
 int div(int a, int b)
 {
     return a / b;
 }
 
+// Multiplication
 int mul(int a, int b)
 {
     return a * b;
@@ -110,5 +114,5 @@ void clean_stdin(void)
 
 
 
-// Bug 1: Need clean_stdin() after all scanf() to clear the input stream
+// Bug 1: Need clean_stdin() after all scanf()'s to clear the input stream
 // But 2: When capturing re-run, scanf needs %c formatting to capture a char
