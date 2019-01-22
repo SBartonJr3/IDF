@@ -105,7 +105,7 @@ In this lab, we are going to ensure everything is setup properly and we are goin
 1. Open your browser and navigate to [https://sourceforge.net/projects/mingw/files/Installer/](https://sourceforge.net/projects/mingw/files/Installer/)
 2. Download **mingw-get-setup.exe**
 3. Click on the downloaded file and install
-4. Once** MinGW Installation Manager** pops up,
+4. Once **MinGW Installation Manager** pops up,
    1. Click on **Basic Setup** on the left hand side
    2. Select **mingw32-base** and **mingw32-gcc-g++**
    3. Click **Installation** on the top tool bar and select **Apply Changes**
