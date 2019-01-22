@@ -98,7 +98,7 @@ In this lab, we are going to ensure everything is setup properly and we are goin
    4. input **C:\MinGW\bin**
    5. click **OK**
 6. Click **OK** and close all instances of command prompt
-7. Attempt **Check if it's already setup **steps again
+7. Attempt **Check if it's already setup** steps again
 
 **Install MinGW**
 
