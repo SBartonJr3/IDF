@@ -24,6 +24,8 @@ Block 3 consists of Assembly and Reverse Engineering. This block is challenging,
 
 * C
 * C++
+* Assembly
+* Reverse Engineering
 
 ### Robert Jakob
 
@@ -32,11 +34,6 @@ Block 3 consists of Assembly and Reverse Engineering. This block is challenging,
 * Python
 * Network Programming
 * Git
-
-### William "Will" Staud
-
-#### Primary Courses:
-
 * Assembly
 * Reverse Engineering
 
