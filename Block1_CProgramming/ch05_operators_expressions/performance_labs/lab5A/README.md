@@ -8,7 +8,7 @@
 * Output the hypotenuse \(C\)
 * Add this to your code "shell"
   * \#include &lt;math.h&gt; // Math header contains sqrt\(\)
-  * **NOTE: **gcc may require a -lm flag. This tells gcc to link a library \(-l\), specifically the math library \(-m\). 
+  * **NOTE:** gcc may require a -lm flag. This tells gcc to link a library \(-l\), specifically the math library \(-m\). 
 
 ```c
 #include <math.h>
